@@ -1,0 +1,247 @@
+/* Обнуляющий стиль */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+li {
+   list-style: none;
+}
+a {
+   color: inherit;
+}
+a,
+a:visited {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+img {
+   vertical-align: top;
+}
+
+body,
+html {
+   height: 100%;
+   line-height: 1;
+}
+/* ================================================================ */
+
+/* №1 */
+// @media (max-width: 1100px) {
+//    [class*="__container"] {
+//       max-width: 970px;
+//    }
+// }
+/* №2 */
+// @media (max-width: 991.98px) {
+//    [class*="__container"] {
+//       max-width: 750px;
+//    }
+// }
+/* №3 */
+// @media (max-width: 767.98px) {
+//    [class*="__container"] {
+//       max-width: none;
+//    }
+// }
+// @mixin container ($maxwidth){
+//    max-width: $maxwidth;
+//    margin: 0 auto;
+//    // padding: 0 15px;
+// }
+
+// =============== Fonts ===============
+
+@font-face {
+   font-family: "Helvetica Neue";
+   src: url(../fonts/HelveticaNeueCyr-Roman.woff), format("woff"), url(../fonts/HelveticaNeueCyr-Roman.woff2), format("woff2");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face {
+   font-family: "Helvetica Neue";
+   src: url(../fonts/HelveticaNeueCyr-Heavy.woff), format("woff"), url(../fonts/HelveticaNeueCyr-Heavy.woff2), format("woff2");
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face {
+   font-family: "Helvetica Neue";
+   src: url(../fonts/HelveticaNeueBlackCondensed.woff), format("woff"), url(../fonts/HelveticaNeueBlackCondensed.woff2), format("woff2");
+   font-weight: 900;
+   font-style: normal;
+   font-display: swap;
+}
+
+
+
+// ===================== HEADER ==================
+.wrapper{
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   font-family: "Helvetica Neue";
+   font-weight: 400;
+   font-size: 14px;
+}
+
+//    .container{
+//       max-width: 1140;
+//       margin: 0 auto;
+//       padding: 0 15px;
+//    }
+// }
+
+// .__container{
+//    max-width: 1140px;
+//    margin: 0 auto;
+//    padding: 0 15px;
+// }
+
+
+main{
+   display: flex;
+   flex-grow: 1;
+}
+
+
+// ================== Header =============
+
+.header {
+   padding: 45px 0 400px 0;
+   position: absolute;
+   &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #FFFFFF;
+      opacity: 0.1;
+      transform: translateY(90px);
+   }
+
+   &__container {
+      // max-width: 1140px;
+      // margin: 0 auto;
+      // padding: 0 15px;
+   }
+
+   &__top {
+   }
+
+   &__row {
+      display: flex;
+      gap: 300px;
+      justify-content: space-between;
+   }
+
+   
+   &__column {
+   }
+   &__logo {
+      display: flex;
+      gap: 8px;
+      cursor: pointer;
+   }
+   &__icon {
+      max-width: 25px;
+      max-height: 25px;
+      cursor: pointer;
+      img{
+         width: 100%;
+      }
+   }
+
+   &__name {
+      align-self: flex-end;
+      max-width: 170px;
+      max-height: 11px;
+      overflow: hidden;
+      object-fit: cover;
+      img{
+         width: 100%;
+      }
+   }
+
+   &__nav {
+      
+   }
+}
+.nav {
+   font-weight: 700;
+   color: #FFFFFF;
+   
+
+   &__items {
+      display: flex;
+      gap: 45px;
+   }
+
+   &__item {
+      &:hover{
+         color: #34C759;
+      }
+   }
+
+   &__link {
+   }
+}
+
+
+
+// ================================= Main ==================================
+
+.main {
+   &__container {
+   }
+   &__page {
+   }
+}
+.page {
+   background: url(../img/main/background.jpg) 100%  / cover no-repeat;
+   &__container {
+      // max-width: 1140px;
+      // margin: 0 auto;
+      // padding: 0 15px;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 1.1666;
+      max-width: 1100px;
+      color: #FFFFFF;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 80px 0 0 0;
+   }
+
+   &__subtitle {
+   }
+
+   &__button {
+   }
+}
+.subtitle {
+}
+.button {
+
+   &__link {
+   }
+}
